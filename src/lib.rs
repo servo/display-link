@@ -1,7 +1,9 @@
 pub mod ios;
 pub mod macos;
 
-use thiserror::Error;
+// High level bindings are broken on arm64 macOS. Disabling until there's a solution.
+
+/*use thiserror::Error;
 use time_point::TimePoint;
 
 #[cfg(target_os = "ios")]
@@ -71,4 +73,4 @@ impl DisplayLink {
     pub fn resume(&mut self) -> Result<(), ResumeError> {
         self.0.resume()
     }
-}
+}*/

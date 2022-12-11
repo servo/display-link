@@ -2,7 +2,9 @@
 
 pub mod cvdisplaylink;
 
-use crate::{
+// Render callback is broken on arm64 macOS. Disabling until there's a solution.
+
+/*use crate::{
     macos::cvdisplaylink::{CVDisplayLink, CVTimeStamp, DisplayLink as RawDisplayLink},
     PauseError, ResumeError,
 };
@@ -115,4 +117,4 @@ impl DisplayLink {
             }
         }
     }
-}
+}*/
